@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'lists/new'
   # データを追加するためのルーティングを追記
   post 'lists' => 'lists#create'
-  get 'lists/index'
+  get 'lists' => 'lists#index'
   get 'lists/show'
   get 'lists/edit'
   # URL「top」にアクセスすると、homesコントローラー内のtopアクションが実行される
