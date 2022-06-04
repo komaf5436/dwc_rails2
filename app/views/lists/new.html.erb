@@ -1,7 +1,9 @@
 <h1>新規投稿</h1>
 
 <!--form_with部分-->
-<%= form_with model: @list do |f| %>
+<!--url:'/lists'へフォームの情報を送信する-->
+<!--method: :post HTTPメソッドをpostで指定-->
+<%= form_with model: @list, url: '/lists', method: :post do |f| %>
 <!--f.モデルオブジェクト :カラム名-->
   <h4>タイトル</h4>
   <%= f.text_field :title %>
