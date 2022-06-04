@@ -14,6 +14,8 @@ class ListsController < ApplicationController
   end
 
   def index
+    # allメソッドはテーブルに保存されている全てのレコードを取得
+    @lists = List.all
   end
 
   def show
