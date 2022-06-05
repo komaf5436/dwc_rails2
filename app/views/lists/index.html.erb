@@ -4,6 +4,9 @@
 <% @lists.each do |list| %>
 
   <p>タイトル</p>
-  <span><%= list.title %></span>
+  <span>
+    <!--link_toメソッドはHTMLの要素を出力する-->
+    <%= link_to list.title, "/lists/#{list.id}" %>
+  </span>
   
 <% end %>
