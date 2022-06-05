@@ -19,6 +19,8 @@ class ListsController < ApplicationController
   end
 
   def show
+    # findメソッドは引数を受け取り、idカラムを引数と比べてレコードを
+    @list = List.find(params[:id])
   end
 
   def edit
