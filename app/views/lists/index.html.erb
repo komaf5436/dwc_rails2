@@ -6,7 +6,7 @@
   <p>タイトル</p>
   <span>
     <!--link_toメソッドはHTMLの要素を出力する-->
-    <%= link_to list.title, "/lists/#{list.id}" %>
+    <%= link_to list.title, list_path(list.id) %>
   </span>
   
 <% end %>

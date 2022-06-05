@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   # 一覧表示するためのルーティング
   get 'lists' => 'lists#index'
   # .../lists/1や.../lists/3に該当する
-  get 'lists/:id' => 'lists#show'
+  # 名前付きルートを設定することでわかりやすく
+  get 'lists/:id' => 'lists#show', as: 'list'
   get 'lists/edit'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
