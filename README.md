@@ -66,7 +66,7 @@ HTTPメソッドを指定
 指定されたデータしか保存されないよう設定する
 
 ## ActiveStorage
-Railsで画像の投稿や表示を行うことが出来る。  
-rails active_storage:install  
-上記のコマンドを行うことによってマイグレーションファイルが作成される。  
-マイグレーションファイルが作成されたらrails db:migrateコマンドで実行する
+Railsで画像の投稿や表示を行うことが出来る。
+rails active_storage:install
+上記のコマンドを行うことによってマイグレーションファイルが作成される。
+マイグレーションファイルが作成されたらrails db:migrateコマンドで実行する。
