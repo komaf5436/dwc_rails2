@@ -14,6 +14,7 @@ class ListsController < ApplicationController
     else
     # データが入力されていなければ新規投稿画面を表示する
       render :new
+    end
   end
 
   def index
