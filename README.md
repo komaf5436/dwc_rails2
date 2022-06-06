@@ -70,3 +70,16 @@ Railsで画像の投稿や表示を行うことが出来る。
 rails active_storage:install
 上記のコマンドを行うことによってマイグレーションファイルが作成される。
 マイグレーションファイルが作成されたらrails db:migrateコマンドで実行する。
+
+## CRUD処理
+### C(create:作成)
+list.save
+
+### R(read:読み取り)
+List.all,List.find(params[:id])
+
+### U(update:更新)
+list.update(list_params)
+
+### D(destroy:削除)
+list.destroy
