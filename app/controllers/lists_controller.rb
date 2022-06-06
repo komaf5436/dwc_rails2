@@ -6,11 +6,14 @@ class ListsController < ApplicationController
   
   def create
     # データを受け取り新規登録するためのインスタンス作成
-    list = List.new(list_params)
+    @list = List.new(list_params)
     # データをデータベースに保存するためのsaveメソッド実行
-    list.save
-    # 詳細画面へリダイレクト
-    redirect_to list_path(list.id)
+    if @list.save
+    # データが入力されていれば詳細画面へリダイレクト
+      redirect_to list_path(@list.id)
+    else
+    # データが入力されていなければ新規投稿画面を表示する
+      render :new
   end
 
   def index
@@ -39,7 +42,7 @@ class ListsController < ApplicationController
     list = List.find(params[:id])
     # データを削除
     list.destroy
-    # 一覧画面へリダイレクト
+    # 一覧画面へ
     redirect_to '/lists'
   end
   
