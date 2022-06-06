@@ -9,4 +9,13 @@
     <%= link_to list.title, list_path(list.id) %>
   </span>
   
+  <!--一覧で画像を表示-->
+  <p>画像</p>
+  <!--画像が投稿されていない場合、既存のno_imageを表示するためif文を使用-->
+  <% if list.image.attached? %>
+    <%= image_tag list.image, size: "200x200" %>
+  <% else %>
+    <%= image_tag 'no_image', size: "200x200" %>
+  <% end %>
+  
 <% end %>
