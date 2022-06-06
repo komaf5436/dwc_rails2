@@ -24,6 +24,8 @@ class ListsController < ApplicationController
   end
 
   def edit
+    # findメソッドは引数を受け取り、idカラムを引数と比べてレコードを取得
+    @list = List.find(params[:id])
   end
   
   private
