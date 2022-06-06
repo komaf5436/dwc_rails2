@@ -93,4 +93,8 @@ Rails専用のコンソールを起動するためのコマンド。
 ### pry
 irbの強化版でirbより使いやすくなる。  
 Gemfileへgem 'pry-rails'を記述し、  
-bundle installコマンドを実行する
+bundle installコマンドを実行する。
+
+## レイアウト
+application.html.erbは全てのビューに反映されるHTMLファイル  
+application.cssも同様全てのビューに反映されるCSSファイル
